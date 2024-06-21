@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include html2canvas library for capturing screenshot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Poem Editor</h1>
+        <div class="editor">
+            <textarea id="poem-input" placeholder="Write your poem here..."></textarea>
+            <input type="text" id="poet-name" placeholder="Poet's name">
+            <div class="controls">
+                <label for="font-select">Font:</label>
+                <select id="font-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+                <label for="font-size">Size:</label>
+                <input type="number" id="font-size" value="16">
+                <label for="font-color">Color:</label>
+                <input type="color" id="font-color" value="#000000">
+                <label for="bg-color">Background:</label>
+                <input type="color" id="bg-color" value="#ffffff">
+            </div>
+            <button onclick="updatePoem()">Update Poem</button>
+            <button onclick="downloadPoem()">Download as JPG</button>
+        </div>
+        <div id="poem-wrapper">
+            <div id="poem-display" class="poem-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
