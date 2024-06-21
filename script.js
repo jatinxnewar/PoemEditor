@@ -18,11 +18,5 @@ function updatePoem() {
 }
 
 function downloadPoem() {
-    const poemDisplay = document.getElementById('poem-display');
-    html2canvas(poemDisplay, { backgroundColor: null }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'poem.jpg';
-        link.href = canvas.toDataURL('image/jpeg');
-        link.click();
-    });
+    alert("Please take a screenshot of your beautiful poem");
 }
